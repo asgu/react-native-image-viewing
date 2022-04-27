@@ -11,6 +11,7 @@ import {
   Animated,
   Dimensions,
   StyleSheet,
+  ImageBackground,
   View,
   VirtualizedList,
   ModalProps,
@@ -103,7 +104,7 @@ function ImageViewing({
       hardwareAccelerated
     >
       <StatusBarManager presentationStyle={presentationStyle} />
-      <View style={[styles.container, { opacity, backgroundColor }]}>
+      <ImageBackground source={imageList[currentImageIndex]} blurRadius={10}  style={[styles.container, { opacity, backgroundColor }]}>
         <Animated.View style={[styles.header, { transform: headerTransform }]}>
           {typeof HeaderComponent !== "undefined" ? (
             React.createElement(HeaderComponent, {
