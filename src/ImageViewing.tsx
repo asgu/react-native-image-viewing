@@ -104,7 +104,7 @@ function ImageViewing({
       hardwareAccelerated
     >
       <StatusBarManager presentationStyle={presentationStyle} />
-      <ImageBackground source={imageList[currentImageIndex]} blurRadius={10}  style={[styles.container, { opacity, backgroundColor }]}>
+      <ImageBackground source={images[currentImageIndex]} blurRadius={10}  style={[styles.container, { opacity, backgroundColor }]}>
         <Animated.View style={[styles.header, { transform: headerTransform }]}>
           {typeof HeaderComponent !== "undefined" ? (
             React.createElement(HeaderComponent, {
@@ -162,7 +162,7 @@ function ImageViewing({
             })}
           </Animated.View>
         )}
-      </View>
+      </ImageBackground>
     </Modal>
   );
 }
